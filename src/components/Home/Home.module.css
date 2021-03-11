@@ -1,0 +1,94 @@
+.nopeContainer {
+  height: 69vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pizzaContainer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 1rem;
+}
+
+.searchWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.searchBar {
+  border: 2px solid #df2c06;
+  border-radius: 20px;
+  width: 30rem;
+  background-color: transparent;
+  padding: 16px;
+  outline: none;
+  align-self: center;
+}
+
+.searchBar::placeholder {
+  color: #df2c06;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.pizzaItem {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+  transition: transform 200ms ease-in-out, box-shadow 200ms ease-in-out;
+}
+
+.pizzaItem:hover {
+  display: flex;
+  flex-direction: column;
+  margin: 1 rem;
+  transform: translateY(-4px);
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.7);
+}
+
+.pizzaImageBox {
+  overflow: hidden;
+  display: flex;
+}
+
+.pizzaImage {
+  width: 20rem;
+  height: 20rem;
+}
+
+.pizzaImage:hover {
+  transform: scale(1.1);
+  transition: transform 3s ease-out;
+}
+
+.pizzaText {
+  text-align: center;
+  background-color: #df2c06;
+}
+
+.pizzaHeader {
+  font-weight: 700;
+  font-size: 18px;
+  color: #7b0000;
+}
+
+.pizzaToppings {
+  text-transform: capitalize;
+  font-size: 16px;
+}
+
+.pizzaPrice {
+  font-style: italic;
+  color: #f0f0f0;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+@media only screen and (max-width: 600px) {
+  .searchBar {
+    width: 100%;
+  }
+}

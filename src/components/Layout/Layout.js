@@ -14,7 +14,7 @@ export default function Layout({children}) {
                 {children}
             </main>
 
-            <footer className={styles.footer}>Made by Cocoa.</footer>
+            <footer className={styles.footer}><a rel="follow" target="_blank" href="https://www.shanekeenan.dev">Made by Cocoa.</a></footer>
         </div>
     )
 }

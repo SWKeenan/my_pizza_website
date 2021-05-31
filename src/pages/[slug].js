@@ -9,29 +9,32 @@ export default function Pizza({pizza, otherPizzas}) {
             <Head>
                 <title>{pizza.name}</title>
             </Head>
-            <div className={styles.pizzaWrapperLeft}>
-                <img src={pizza.image} alt={pizza.name} className={styles.pizzaImage} />
-            </div>
-            <div className={styles.pizzaWrapperRight}>
-                <div className={styles.pizzaInfo}>
-                    <p className={styles.pizzaTitle}>{pizza.name}</p>
-                    <p className={styles.pizzaDescription}>{pizza.description}</p>
-                    <p className={styles.pizzaPrice}>€{pizza.price}</p>
-                    <p className={styles.pizzaToppings}>{pizza.toppings.map(topping => topping).join(', ')}</p>
+            <div className={styles.pizzaContainer}>
+                <div className={styles.pizzaWrapperLeft}>
+                    <img src={pizza.image} alt={pizza.name} className={styles.pizzaImage} />
                 </div>
-                <div className={styles.otherPizzasWrapper}>
-                    {otherPizzas.map(otherpizza => {
-                        return(
-                            <div className={styles.otherPizzas} key={otherpizza.id}>
-                                <Link href={"/" + otherpizza.slug}><a>
-                                <img src={otherpizza.image} alt={otherpizza.name} />
-                                <p>{otherpizza.name}</p>
-                                </a></Link>
-                            </div>  
-                        )
-                    })}
+                <div className={styles.pizzaWrapperRight}>
+                    <div className={styles.pizzaInfo}>
+                        <p className={styles.pizzaTitle}>{pizza.name}</p>
+                        <p className={styles.pizzaDescription}>{pizza.description}</p>
+                        <p className={styles.pizzaPrice}>€{pizza.price}</p>
+                        <p className={styles.pizzaToppings}>{pizza.toppings.map(topping => topping).join(', ')}</p>
+                    </div>
+                    <div className={styles.otherPizzasWrapper}>
+                        {otherPizzas.map(otherpizza => {
+                            return(
+                                <div className={styles.otherPizzas} key={otherpizza.id}>
+                                    <Link href={"/" + otherpizza.slug}><a>
+                                    <img src={otherpizza.image} alt={otherpizza.name} />
+                                    <p>{otherpizza.name}</p>
+                                    </a></Link>
+                                </div>  
+                            )
+                        })}
+                    </div>
                 </div>
             </div>
+            <footer className={styles.footer}><a rel="follow" target="_blank" href="https://www.shanekeenan.dev">Made by Cocoa.</a></footer>
         </div>
     )
 }
